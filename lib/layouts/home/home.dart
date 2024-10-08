@@ -207,8 +207,13 @@ class _SongItemSection extends StatelessWidget {
       subtitle: Text(song.artist),
       trailing: IconButton(
         icon: const Icon(CupertinoIcons.chevron_down),
-        onPressed: () {},
+        onPressed: () {
+          parent.showBottomSheet();
+        },
       ),
+      onTap: () {
+        parent.navigate();
+      },
     );
   }
 }
