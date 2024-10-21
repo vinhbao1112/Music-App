@@ -176,6 +176,19 @@ class _HomeTabPageState extends State<HomeTabPage> {
       });
     });
   }
+
+  void showBottomSheet() {
+    bao
+  }
+
+  void navigate(Song song) {
+    Navigator.push(context, CupertinoPageRoute(builder: (context) {
+      return NowPlaying(
+        songs: songs,
+        playSong: song,
+      );
+    }));
+  }
 }
 
 class _SongItemSection extends StatelessWidget {
@@ -212,7 +225,7 @@ class _SongItemSection extends StatelessWidget {
         },
       ),
       onTap: () {
-        parent.navigate();
+        parent.navigate(song);
       },
     );
   }
