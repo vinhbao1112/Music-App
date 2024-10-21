@@ -1,5 +1,6 @@
 import 'package:fluter_1/layouts/discovery/discovery.dart';
 import 'package:fluter_1/layouts/home/viewmodel.dart';
+import 'package:fluter_1/layouts/now_playing/playing.dart';
 import 'package:fluter_1/layouts/settings/settings.dart';
 import 'package:fluter_1/layouts/users/user.dart';
 import 'package:flutter/cupertino.dart';
@@ -177,15 +178,13 @@ class _HomeTabPageState extends State<HomeTabPage> {
     });
   }
 
-  void showBottomSheet() {
-    bao
-  }
+  void showBottomSheet() {}
 
   void navigate(Song song) {
     Navigator.push(context, CupertinoPageRoute(builder: (context) {
       return NowPlaying(
         songs: songs,
-        playSong: song,
+        playingSong: song,
       );
     }));
   }
